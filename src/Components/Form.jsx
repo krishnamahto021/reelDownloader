@@ -46,7 +46,7 @@ const Form = () => {
           value={instaLink}
           onChange={(e) => setInstaLink(e.target.value)}
           required
-          className="focus:outline-none rounded-md p-5 "
+          className="focus:outline-none rounded-md p-5 w-full md:w-[25vw]"
         ></input>
       </form>
       {loading && (
@@ -71,8 +71,12 @@ const Form = () => {
         </div>
       )}
       {video && (
-        <div className="block m-auto  w-full   shadow-md p-2 mt-5 rounded-md">
-          <video src={video.data.main_media_hd} controls></video>
+        <div className="flex justify-around  w-full p-2 mt-5 rounded-md">
+          <video
+            className="w-1/4 "
+            src={video.data.main_media_hd}
+            controls
+          ></video>
         </div>
       )}
     </section>
